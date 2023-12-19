@@ -1,0 +1,50 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.7.25)  19 DEC 2023 13:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-07-04> (preamble.tex
+(C:\Users\rlf3\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfmanagement-testph
+ase\pdfmanagement-testphase.sty
+Package: pdfmanagement-testphase 2023-12-09 v0.96d LaTeX PDF management testpha
+se bundle
+
+(C:\Users\rlf3\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tagpdf\tagpdf-base.s
+ty
+Package: tagpdf-base 2023-11-19 v0.98q part of tagpdf - provide base, no-op ver
+sions of the user commands 
+\c@g__tag_MCID_abs_int=\count185
+\c@g__tag_struct_abs_int=\count186
+)
+(C:\Users\rlf3\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfmanagement-testph
+ase\pdfmanagement-testphase.ltx
+File: pdfmanagement-testphase.ltx 2023-12-09 v0.96d PDF management code (testph
+ase)
+\g__pdfmanagement_EmbeddedFiles_int=\count187
+
+
+! LaTeX Error: File `l3bitset.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.1086 \bitset_new:Nn
+                      \l_pdfannot_F_bitset 
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 400 strings out of 478338
+ 11617 string characters out of 2835250
+ 309342 words of memory out of 3000000
+ 18915 multiletter control sequences out of 15000+600000
+ 469259 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 47i,0n,54p,296b,22s stack positions out of 10000i,1000n,20000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
