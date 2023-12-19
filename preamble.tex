@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   LaTeX source code to approximate a NIST Technical report
+%   CrossMark watermark will be added on final PDF
+%   Developed by K. Miller, kmm5@nist.gov 
+%   Last updated: 12-July-2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Tagpdf settings, document class and template package 
+%   DO NOT DELETE
+\RequirePackage{pdfmanagement-testphase}
+\DeclareDocumentMetadata{pdfversion=2.0,uncompress,testphase=phase-II}
+\documentclass[12pt]{article}
+\usepackage{settings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DRAFT: TRUE OR FALSE?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REQUIRED!!! Select either Draft (toggletrue) or Final (togglefalse)
+\newtoggle{draft}
+% \toggletrue{draft} % use if this is a Draft
+ \togglefalse{draft} % use if this is Final
+%
+
+\iftoggle{draft}{
+\usepackage{lineno}
+\linenumbers
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publication Metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\pubseries}{Series [Choose one from list]} % Replace with a series title from the list below %
+% {Trustworthy and Responsible AI}
+% {Advanced Manufacturing Series}
+% {Creating Helpful Incentives to Produce Semiconductors for America}
+% {Data Collection Instruments}
+% {Economic Analysis Brief}
+% {Federal Information Processing Standards Publications}
+% {Grant/Contractor Report}
+% {Handbook}
+% {Interagency Report}
+% {Internal Report}
+% {National Standard Reference Data Series}
+% {Special Publication 250}
+% {Special Publication 260}
+% {Special Publication 500}
+% {Special Publication 1200}
+% {Special Publication 1500}
+% {Special Publication 1900}
+% {Special Publication 2000}
+% {Special Publication 2100}
+% {Special Publication 2200}
+% {Technical Note}
+% {Technology Transfer Brief}
+% {Voting Technology Series}
+\newcommand{\pubnumber}{Publication Identifier} 
+\newcommand{\DOI}{https://doi.org/10.6028/NIST.XXX.XXXX}
+\newcommand{\pubmonth}{Month}
+\newcommand{\pubyear}{Year}
+\newcommand{\erratadate}{MM-DD-YYYY}
+\newcommand{\pubtitle}{Title}
+\newcommand{\pubsubtitle}{Subtitle} % delete if no subtitle %
+%\newcommand{\draftstage}{Draft Stage} % Draft Stage is REQUIRED for drafts/preprints; Draft stages are listed in the NIST Publication Identifier guidance: https://www.nist.gov/nist-research-library/nist-technical-series-publications-author-instructions#pubid   %
+\newcommand{\authorlist}{Author 1, Author 2, Author 3, Author 4, Author 5, Author 6, Author 7, Author 8, Author 9} % Format author name as: Last name First Initial Middle Initial (e.g., Miller KM)
+\newcommand{\authorone}{Author 1}
+\newcommand{\authortwo}{Author 2}
+\newcommand{\authorthree}{Author 3}
+\newcommand{\authorfour}{Author 4}
+\newcommand{\authorfive}{Author 5}
+\newcommand{\authorsix}{Author 6}
+\newcommand{\authorseven}{Author 7}
+\newcommand{\authoreight}{Author 8}
+\newcommand{\authornine}{Author 9} % Add or delete commands based on number of authors %
+\newcommand{\pubabstract}{REQUIRED. Concise, informative statement of the purpose, scope, methods, results, and conclusions/recommendations of the report. Do not include references. This section is required for indexing and cataloging purposes to assist with discoverability of the report.}
+\newcommand{\keywords}{REQUIRED. Alphabetize, separate keywords with a semicolon, and end with a period.}
+\newcommand{\publang}{English} %If translation, change to correct language%
+\usepackage{pdfproperties}

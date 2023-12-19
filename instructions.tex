@@ -1,0 +1,76 @@
+\begin{titlepage}
+
+\textbf{NIST Technical Series Publications Manuscript Template}
+
+This template is required for submitting a new or revised manuscript for publication in a NIST Technical Series. Descriptions of series and instructions for authors are available 
+on the NIST Research Library’s \href{https://www.nist.gov/nist-research-library/nist-publications}{external} and \href{https://inet.nist.gov/library/publishing-support-nist-publications/nist-technical-series-publications}{internal} websites.
+Please use this file for all new and revised submissions. 
+Do not add, modify, or delete built-in styles. You may use Carlito instead of calibri font, see instructions in settings.sty.
+
+\textbf{Checklist}
+  \begin{multicols}{2}
+   \begin{itemize}[nospace]
+   \item Replace boilerplate text in preamble.tex and main.tex
+ \begin{itemize}[nospace]
+     \item[\ding{114}] Series
+     \item[\ding{114}] Publication Identifier
+     \item[\ding{114}] Title, Subtitle
+     \item[\ding{114}] Author, Affiliations
+    \item[\ding{114}] DOI
+    \item[\ding{114}] Publication Month and Year 
+    \item[\ding{114}] Relevant disclaimers
+    \item[\ding{114}] ERB approval date
+    \item[\ding{114}] Superseded publication 
+    \item[\ding{114}] Author ORCIDs
+    \item[\ding{114}] Abstract and Keywords
+    \item[\ding{114}] Change log (if update or revision)
+\end{itemize}
+\end{itemize}
+\begin{itemize}[nospace]
+   \item If submitting a draft/pre-print
+\begin{itemize}[nospace]
+\item[\ding{114}] Insert line numbers by adjusting settings
+\item[\ding{114}] Draft stage
+\item[\ding{114}] Public comment information
+\end{itemize}
+\end{itemize}
+\begin{itemize}[nospace]
+   \item  Ensure manuscript is well structured
+  \begin{itemize}[nospace]
+  \item[\ding{114}] Write alt-text for all images and any tables that use visual elements 
+  \item[\ding{114}] Write meaningful hyperlink text (\href{https://webaim.org/techniques/hypertext/link_text}{see examples})
+  \item[\ding{114}] Do not rely on color or formatted text to convey information (\href{https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-visual-audio-contrast-without-color}{more information})
+  \item[\ding{114}] Ensure sufficient contrast for text and background colors (\href{https://webaim.org/articles/contrast/}{see example})
+  \item[\ding{114}] Use the \href{https://github.com/u-fischer/tagpdf}{tagpdf package} with LuaLaTeX compiler
+ \end{itemize}
+  \end{itemize}
+\end{multicols}
+
+%%%%%
+\textbf{Notes on Accessibility Challenges in LaTeX}
+
+Using Overleaf, or another TeX compiler, without meticulous use of the tagpdf package will export an untagged PDF. If you do not tag your LaTeX document using the tagpdf options, the majority of compliance items must be completed on the PDF using Adobe Acrobat. Overleaf has \href{https://www.overleaf.com/learn/latex/An_introduction_to_tagged_PDF_files%3A_internals_and_the_challenges_of_accessibility}{training} information on how to make your PDFs accessible. Essentially, a raw PDF out of Overleaf, or another TeX compiler, will be a blank document to a screen reader. The PDF metadata used by screen readers is set in the pdfproperties.sty template file.\\
+\emph{How to use the tagpdf package}
+\begin{itemize}[nospace]
+\item use the tagstruct and tagmc before and after section, heading title, graphic, table, and boxed text.
+\item review the \href{https://github.com/u-fischer/tagpdf}{tagpdf} documentation for all Phase II available tags
+\item run an accessibility check on the compiled PDF. Correct any errors in the LaTeX or on the PDF using the steps below.
+\end{itemize}
+
+\emph{How to create an accessible PDF using Adobe Acrobat (not reader) }
+\begin{itemize}[nospace]
+\item Under Tools, select Accessibility. Accessibility tools will appear on the right and left sides of the screen.
+ \item Perform an accessibility check first
+ \item The three errors (red X marks) that are most common in LaTeX produced PDFs under the 'Document' section are: Tagged PDF, Primary Language, Title, and Bookmarks.
+ \item The other errors in Page Content, Tables, Lists, and Headings can be fixed by Tagging the PDF. Go back to the Accessibility Tools and choose 'Autotag Document'.
+ \item Run the Accessibility Check again to see what errors were cleared under the 'Document' section. The remaining errors: Language and Title can be fixed by right clicking and selecting 'Fix'.
+ \item Errors in the Alternate Text and Headings section should be addressed next. 
+ \item Alternate Text can be addressed by choosing the Accessibility Tool 'Set Alternate Text'. This allows you to sweep the document for images and add alt text, or a 'decorative/archive' tag in one step.
+ \item Errors in nested Headings needed by fixed by adjusting Acrobat's auto-tagging. Right click the error and choose 'Explain' for information or 'Show in Tags Panel' to fix directly.
+ \item Errors in Page Content, Tables, and Lists are treated as warnings, as they can be difficult to fix and may be a result of a conversion issue from LaTeX to PDF. The Accessibility Checker will give you hints and explanations for each warning if you're unsure how to fix or what the error is.
+\end{itemize}
+
+%%%%%
+ \end{titlepage}
+
+ 

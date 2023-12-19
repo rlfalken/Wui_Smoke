@@ -1,0 +1,142 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For DRAFTS only 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Accessibility -- tagpdf introduced in preamble.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tagpdf}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for symbols, equations, and mathematical operators 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}   
+\usepackage{amssymb}    
+\usepackage{mathptmx}
+\usepackage{pifont}
+\usepackage{textcomp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for figures and visuals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}   
+\usepackage{xcolor}
+\usepackage{epstopdf} % converting EPS figure files to PDF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for page formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{import}
+\usepackage[hang,flushmargin,bottom]{footmisc} 
+\usepackage{fancyhdr, lastpage}	% formatting document, calculating number of pages, formatting headers
+\setlength{\topmargin}{-0.5in}
+\setlength{\headheight}{39pt}
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{0.25in}
+\setlength{\textwidth}{6.0in}
+\setlength{\textheight}{8.5in}
+\usepackage[all]{nowidow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for text formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\setmainfont[
+ BoldFont={calibrib.ttf}, 
+ ItalicFont={calibrii.ttf},
+ BoldItalicFont={calibriz.ttf}
+ ]{calibri.ttf}
+% \usepackage[sfdefault,lf]{carlito} % use this instead of setmainfont if you want font to be Carlito
+\usepackage{parskip}
+\usepackage{bm}
+\usepackage{float}
+\usepackage[hidelinks, pdfdisplaydoctitle=true]{hyperref}
+\usepackage{xurl}
+\urlstyle{same}
+\usepackage{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for section formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+\usepackage[titletoc]{appendix}
+\setcounter{secnumdepth}{4}
+\titleformat{\section}{\normalsize\bfseries}{\thesection.}{0.3em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.3em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.3em}{}
+\titleformat{\paragraph}{\normalsize\bfseries}{\theparagraph.}{0.3em}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for list formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}         % to control spacing between bullets/numbered lists
+ \SetEnumitemKey{nospace}{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt}
+ \usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for table of contents formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{secdot}		
+\usepackage{tocloft}
+\setcounter{tocdepth}{4}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % main contents - part, secs, subsec, paragraph
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \renewcommand{\contentsname}{{Table of Contents}}
+    \renewcommand{\cftsecpagefont}{\normalsize}
+    \renewcommand{\cftsecfont}{\normalsize}
+    \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+    \renewcommand\cftbeforesecskip{6pt}
+    \renewcommand{\cftsecaftersnum}{.}
+    \setlength{\cftsecnumwidth}{12pt}
+    \renewcommand{\cftsubsecfont}{\normalsize}
+    \renewcommand{\cftsubsecpagefont}{\normalsize}
+    \renewcommand\cftbeforesubsecskip{6pt}
+    \renewcommand{\cftsubsecaftersnum}{.}
+    \setlength{\cftsubsecnumwidth}{20pt}
+    \renewcommand{\cftsubsubsecfont}{\normalsize}
+    \renewcommand{\cftsubsubsecpagefont}{\normalsize}
+    \renewcommand\cftbeforesubsubsecskip{6pt}
+    \renewcommand{\cftsubsubsecaftersnum}{.}
+    \setlength{\cftsubsubsecnumwidth}{29pt}
+     \renewcommand{\cftparafont}{\normalsize}
+    \renewcommand{\cftparapagefont}{\normalsize}
+    \renewcommand\cftbeforeparaskip{6pt}
+    \renewcommand{\cftparaaftersnum}{.}
+    \setlength{\cftparanumwidth}{38pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % list of figures
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \renewcommand{\listfigurename}{{List of Figures}}
+    \renewcommand{\cftfigpagefont}{\normalsize}
+    \renewcommand{\cftfigfont}{\normalsize}
+    \renewcommand{\cftfigindent}{0em}
+    \addtolength{\cftfignumwidth}{0.3em}
+    \renewcommand{\cftfigpresnum}{\figurename\ }
+    \renewcommand{\cftfigaftersnum}{.}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % list of tables
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \renewcommand{\listtablename}{{List of Tables}}
+    \renewcommand{\cfttabpagefont}{\normalsize}
+    \renewcommand{\cfttabfont}{\normalsize}
+    \renewcommand{\cfttabindent}{0em}
+    \addtolength{\cfttabnumwidth}{1em}
+    \renewcommand{\cfttabpresnum}{\tablename\ }
+    \renewcommand{\cfttabaftersnum}{.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for reference list formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[numbers,sort&compress]{natbib} % format bibliography 
+\renewcommand{\bibsection}{}
+\setlength{\bibsep}{0.0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for caption formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption} % required for Figure labels
+\captionsetup{labelfont=bf,labelsep=period,figurename=Fig.,justification=raggedright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if using an index
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{imakeidx}
+\makeindex[columns=1, title=Index, intoc]
